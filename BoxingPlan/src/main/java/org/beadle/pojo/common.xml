@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE sqlMap     
+
+    PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"     
+
+    "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+
+<sqlMap namespace="common">
+	<insert id="insertOne" parameterClass="java.util.HashMap">
+		INSERT INTO $tableName$ (
+		<iterate property="columnList" conjunction="," >
+			$columnList[]$
+		</iterate>
+		
+		<![CDATA[ 
+		) VALUES ( 
+		]]> 
+		<iterate property="valueList" conjunction=",">
+			#valueList[]#
+		</iterate> 
+		<![CDATA[ 
+			) 
+   	 	]]> 
+	</insert>
+	
+	<update id="updateOneById" parameterClass="java.util.HashMap">
+	UPDATE
+		$tableName$
+	SET
+		<iterate property="paramList" conjunction=",">
+			$paramList[].name$ = #paramList[].value#
+		</iterate>
+	WHERE 
+		id = #id#
+	</update>
+	
+	<select id="getOneById" parameterClass="java.util.HashMap" resultClass="java.util.HashMap">
+	SELECT 
+		<iterate property="columnList" conjunction="," >
+			$columnList[]$
+		</iterate> 
+	FROM
+		$tableName$
+	WHERE 
+		id = #id#
+	</select>
+</sqlMap>

@@ -1,0 +1,143 @@
+body{
+	width: 960px;
+	margin: 10px auto;
+	background-color: #f1f2f3;
+	font-family: 'Microsoft YaHei',sans-serif;
+}
+.body_head{
+	width: 100%;
+	height: 100px;
+	background-color: white;
+	background-image: url("/img/head_bg.jpg");
+	border: 1px solid #ddd;
+}
+.body_head .user_content{
+	width: 200px;
+	height: 30px;
+	position: relative;
+	left: 760px;
+	top: 70px;
+}
+.body_content{
+	width:100%;
+	margin: 10px 0px 10px 0;
+	background-color: white;
+}
+.body_content .zone{
+	width: 960px;
+	margin: 0px auto;
+	overflow:hidden;
+}
+.body_content .zone .block{
+	width: 320px;
+	height: 210px;
+	float: left;
+	cursor: pointer;
+	border: 5px solid #ddd;
+}
+.body_content .zone .block img{
+	float: left;
+	width:100%;
+	height:100%;
+}
+.body_content .zone .block .black_layer{
+	width: 310px;
+	height: 200px;
+	background-color: black;
+	opacity: 0;
+}
+.body_foot{
+	width: 100%;
+	height: 50px;
+	text-align: center;
+	color: #919191;
+	font-size: 12px;
+}
+.frame_layer{
+	width: 100%;
+	height: 900px;
+	overflow:hidden;
+	position: absolute;
+	top:0;
+	left:0;
+	opacity:0.7;
+	background-color:grey;
+}
+.login_frame{
+	width:400px;
+	height:260px;
+	position:absolute;
+	top:50%;
+	left:50%;
+	margin-top:-130px;
+	margin-left:-200px;
+	background-color:white;
+	border-radius:8px;
+	z-index: 998;
+}
+.login_frame .login_title{
+	width: 100%;
+	height:60px;
+	line-height: 60px;
+	text-align: center;
+	font-size: 18px;
+	font-weight: bold;
+	color: grey;
+}
+
+.login_frame .form-group{
+	width:100%;
+}
+.login_frame .form-group input{
+	width: 250px;
+	margin: 20px auto;
+}
+.login_frame .login_bottom{
+	width: 200px; 
+	margin: 0 auto; 
+}
+
+.regist_frame{
+	display: none;
+	width:400px;
+	height:360px;
+	position:absolute;
+	top:50%;
+	left:50%;
+	margin-top:-180px;
+	margin-left:-200px;
+	background-color:white;
+	border-radius:8px;
+	z-index: 998;
+}
+.regist_frame .regist_title{
+	width: 100%;
+	height:60px;
+	line-height: 60px;
+	text-align: center;
+	font-size: 18px;
+	font-weight: bold;
+	color: grey;
+}
+.regist_frame .form-group{
+	width:100%;
+	height: 60px;
+}
+.regist_frame label{
+	float: left;
+	width: 150px;
+	text-align: center;
+    height: 34px;
+	vertical-align:middle;
+	line-height: 34px;
+}
+.regist_frame .form-group input{
+	width: 200px;
+	float: left;
+	height: 34px; 
+	vertical-align:middle;
+}
+.regist_frame .regist_bottom{
+	width: 160px; 
+	margin: 0 auto; 
+}
