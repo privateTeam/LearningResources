@@ -20,7 +20,7 @@ import org.springframework.stereotype.Repository;
 
 import com.ibatis.sqlmap.client.event.RowHandler;
 
-@SuppressWarnings("deprecation")
+@SuppressWarnings("deprecation231")
 public class BaseDao<T> implements SqlMapExecutorAware{
 
 	private SqlMapClientOperations sqlMapExecutor;
